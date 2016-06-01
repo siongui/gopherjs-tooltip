@@ -1,0 +1,27 @@
+export GOROOT=$(realpath ../go)
+export GOPATH=$(realpath .)
+export PATH := $(GOROOT)/bin:$(GOPATH)/bin:$(PATH)
+
+PKG="github.com/siongui/gopherjs-tooltip"
+
+devserver: local js
+	@echo "\033[92mDevelopment Server Running ...\033[0m"
+	@go run example/server.go
+
+js:
+	@echo "\033[92mGenerating JavaScript ...\033[0m"
+	@gopherjs build example/app.go -o example/app.js
+
+fmt:
+	@echo "\033[92mGo fmt source code...\033[0m"
+	@go fmt *.go
+	@go fmt example/*.go
+
+local:
+	@[ -d src/${PKG}/ ] || mkdir -p src/${PKG}/
+	@cp init.go src/${PKG}/
+	@cp tooltip.go src/${PKG}/
+
+install:
+	@echo "\033[92mInstalling GopherJS ...\033[0m"
+	go get -u github.com/gopherjs/gopherjs
