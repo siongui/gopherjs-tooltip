@@ -7,6 +7,9 @@ Development Environment:
   - `Ubuntu 16.04`_ (``Chromium 50.0.2661.102 Ubuntu 16.04 (64-bit)``)
   - `Go 1.6.2`_
 
+If you need tooltip written in AngularJS_, see [3]_.
+
+
 Install
 +++++++
 
@@ -21,7 +24,7 @@ Install GopherJS_ and this package:
 Example
 +++++++
 
-see `example <example>`_ directory. Also see Demo_.
+See `example <example>`_ directory. Also see Demo_.
 
 
 UNLICENSE
@@ -60,11 +63,14 @@ References
 
 .. [9] `[Golang] GopherJS DOM Example - Access HTML Data Attribute <https://siongui.github.io/2016/01/12/gopherjs-dom-example-access-html-data-attribute/>`_
 
+.. [10] `[GopherJS] Tooltip <https://siongui.github.io/2016/06/05/gopherjs-tooltip/>`_
+
 
 .. _Ubuntu 16.04: http://releases.ubuntu.com/15.10/
 .. _Go 1.6.2: https://golang.org/dl/
 .. _Go: https://golang.org/
 .. _GopherJS: https://github.com/gopherjs/gopherjs
+.. _AngularJS: https://angularjs.org/
 .. _UNLICENSE: http://unlicense.org/
 .. _Tooltip: https://www.google.com/search?q=javascript+tooltip
 .. _Demo: https://siongui.github.io/gopherjs-tooltip/
