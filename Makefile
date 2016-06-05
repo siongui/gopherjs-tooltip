@@ -6,7 +6,7 @@ PKG="github.com/siongui/gopherjs-tooltip"
 
 devserver: local js
 	@echo "\033[92mDevelopment Server Running ...\033[0m"
-	@go run example/server.go
+	@go run devserver/server.go
 
 js:
 	@echo "\033[92mGenerating JavaScript ...\033[0m"
@@ -25,3 +25,10 @@ local:
 install:
 	@echo "\033[92mInstalling GopherJS ...\033[0m"
 	go get -u github.com/gopherjs/gopherjs
+
+deploy:
+	@echo "\033[92mDeploy to GitHub Pages (Project) ...\033[0m"
+	@rm example/*.go
+	@ghp-import example/
+	@git push origin gh-pages
+	@git checkout example/
